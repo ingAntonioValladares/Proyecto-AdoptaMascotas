@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopta no compres</title>
+    <link rel="stylesheet" href="mascotas.css" />
+  </head>
+
+  <body class="overflow-scroll">
+    <header class="header">
+      <div class="detalle-header">
+        <div class="titulo-header">
+          <h1>Registro de Mascotas Adoptadas</h1>
+          <p>Adopta un amigo, salva una vida 😄🌟.</p>
+        </div>
+        <!-- .titulo-header -->
+        <button id="perro-btn"></button>
+      </div>
+    </header>
+
+    <main class="contenido-principal contenedor">
+      <section class="estadistica">
+        <p>Todal de adopciones:</p>
+        <span id="contador"></span>
+        <!--MEDIANTE JS -->
+      </section>
+      <section class="mascota">
+        <h2>MASCOTA:</h2>
+        <section class="detalle-mascota">
+          <div class="detalle">
+            <ul class="propiedades-mascota">
+              <div>
+                <li>Nombre:</li>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="ejemplo: Luna, Max"
+                />
+              </div>
+              <!-- Nombre -->
+              <div>
+                <li>Edad:</li>
+                <input
+                  type="text"
+                  id="edad"
+                  name="edad"
+                  placeholder="ejemplo: 1 año 7 meses"
+                />
+              </div>
+              <!-- Edad -->
+              <div>
+                <li>Color:</li>
+                <input
+                  type="text"
+                  id="color"
+                  name="color"
+                  placeholder="ejemplo: blanco, negro"
+                />
+              </div>
+              <!-- Color -->
+              <div>
+                <li>Raza:</li>
+                <input
+                  type="text"
+                  id="raza"
+                  name="raza"
+                  placeholder="ejemplo: shitzu, doberman"
+                />
+              </div>
+              <!-- Raza -->
+              <div>
+                <li>Dueños:</li>
+                <input
+                  type="text"
+                  id="dueños"
+                  name="dueños"
+                  placeholder="ejemplo: Antonio, Briseida"
+                />
+              </div>
+              <!-- Dueños -->
+              <div>
+                <li>Fecha Adopción:</li>
+                <input type="date" id="fechaAdopcion" name="fechaAdopcion" />
+              </div>
+              <!-- Fecha Adopción -->
+            </ul>
+            <!-- .propiedades-mascota -->
+            <div class="botones-menu">
+              <button id="btn_registrar">REGISTRAR</button>
+              <button id="btn_buscar">BUSCAR</button>
+              <button id="btn_verTodos">VER TODOS</button>
+            </div>
+            <!-- .botones-menu -->
+          </div>
+          <!-- .detalle -->
+          <div id="menu" class="menu"></div>
+          <!-- .menu -->
+        </section>
+        <!-- .detalle-mascota -->
+      </section>
+      <!-- .mascota -->
+    </main>
+
+    <section class="contenido-TablaMascota contenedor">
+      <table id="tablaMascotas">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Color</th>
+            <th>Raza</th>
+            <th>Adoptantes</th>
+            <th>Fecha de Adopción</th>
+            <th>Etapa de vida</th>
+          </tr>
+          <!-- fila -->
+        </thead>
+        <!-- Encabezado de la tabla -->
+        <tbody id="cuerpoTabla">
+          <!-- Las filas se generarán aquí con JS -->
+        </tbody>
+      </table>
+      <div class="botones-lista">
+        <button id="anterior">Anterior</button>
+        <span id="pagina">1</span>
+        <button id="siguiente">Siguiente</button>
+      </div>
+    </section>
+
+    <section id="card" class="display-none">
+      <ul class="mascotaContenido">
+        <li>
+          Nombre:
+          <!-- <span id="nombre"></span> -->
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="ejemplo: Luna, Max"
+          />
+        </li>
+        <li>
+          Edad:
+          <!-- <span id="edad"></span> -->
+          <input
+            type="text"
+            id="edad"
+            name="edad"
+            placeholder="ejemplo: 1 año 7 meses"
+          />
+        </li>
+        <li>
+          Color:
+          <!-- <span id="color"></span> -->
+          <input
+            type="text"
+            id="color"
+            name="color"
+            placeholder="ejemplo: blanco, negro"
+          />
+        </li>
+        <li>
+          Raza:
+          <!-- <span id="raza"></span> -->
+          <input
+            type="text"
+            id="raza"
+            name="raza"
+            placeholder="ejemplo: shitzu, doberman"
+          />
+        </li>
+        <li>
+          Adoptantes:
+          <!-- <span id="dueño"></span> -->
+          <input
+            type="text"
+            id="dueño"
+            name="dueño"
+            placeholder="ejemplo: Antonio, Briseida"
+          />
+        </li>
+        <li>
+          Fecha Adopción:
+          <!-- <span id="fechaAdopcion"></span> -->
+          <input
+            type="text"
+            id="fechaAdopcion"
+            name="fechaAdopcion"
+            placeholder="año-mes-dia"
+          />
+        </li>
+        <li>
+          Etapa de vida:
+          <input
+            type="text"
+            id="etapaDeVida"
+            name="etapaDeVida"
+            placeholder="etapa de vida"
+          />
+        </li>
+        <div class="opciones">
+          <li id="cerrar">Cerrar</li>
+          <li id="guardar">Guardar cambios</li>
+        </div>
+      </ul>
+    </section>
+    <!-- <footer>Todos los derechos reservados</footer> -->
+    <!-- <script src="index.js"></script> -->
+    <!-- <script src="huellas.js"></script> -->
+    <script src="index.js"></script>
+    <script src="huellas.js"></script>
+  </body>
+</html>

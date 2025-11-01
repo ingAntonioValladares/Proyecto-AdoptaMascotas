@@ -1,0 +1,433 @@
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.display-none {
+  display: none;
+}
+/* HEADER */
+.header {
+  background-color: rgb(165, 161, 161);
+  padding: 2rem;
+}
+.detalle-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 0.2rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .detalle-header {
+    gap: 2rem;
+  }
+}
+/* Para crear huellas por toda la pagina */
+#perro-btn {
+  display: none;
+  cursor: grab;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  background-image: url(/img/huellaperro3.PNG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: brown;
+}
+@media (min-width: 768px) {
+  #perro-btn {
+    display: block;
+  }
+}
+#perro-btn {
+  box-shadow: 4px 4px 6px rgb(165, 42, 42, 0.4);
+}
+.huella {
+  position: absolute;
+  font-size: 10rem;
+  pointer-events: none; /* No interfiere con clics */
+  animation: aparecer 0.5s ease-out;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* GENERICAS */
+h1 {
+  font-weight: 800;
+  color: gold;
+  font-size: 2rem;
+  margin: 0;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+li {
+  font-size: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  li {
+    font-size: 2rem;
+  }
+}
+p {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+/* UTILIDADES */
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* MASCOTA */
+.mascota {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 0;
+  background-color: rgba(215, 144, 85, 0.224);
+  border-radius: 20px;
+}
+/* DETALLE MASCOTA*/
+.detalle-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .detalle-mascota {
+    flex-direction: row;
+  }
+}
+.detalle {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+}
+/* PROPIEDADES */
+.propiedades-mascota {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem 5rem;
+  padding: 2rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .propiedades-mascota {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+}
+.propiedades-mascota input {
+  width: 85%;
+  height: 60%;
+  font-size: 20px;
+  padding-left: 8px;
+}
+@media (min-width: 768px) {
+  .propiedades-mascota input {
+    width: 100%;
+  }
+}
+/* MENU */
+#menu {
+  display: none;
+}
+@media (min-width: 900px) {
+  #menu {
+    display: block;
+  }
+}
+.menu {
+  width: 38rem;
+  height: 36rem;
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 2);
+}
+.menu {
+  background-image: url(/img/mascota.PNG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.botones-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+}
+.botones-menu button {
+  cursor: grab;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: 2px solid gold;
+  border-radius: 25px;
+  padding: 10px;
+  color: rgb(194, 167, 14);
+  background-color: rgba(255, 255, 255, 0.65);
+}
+/* EFECTO HOVER SOLO A LOS 2 PRIMERO BOTONES */
+.botones-menu button:nth-child(-n + 2):hover {
+  background-color: gold;
+  color: white;
+  border: brown;
+}
+.botones-menu button:last-of-type {
+  grid-column: 1/4;
+  background-color: gold;
+  color: white;
+  margin-top: 10px;
+}
+
+/* ESTADISTICA */
+.estadistica {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  width: fit-content;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
+.estadistica {
+  display: flex;
+  flex-direction: column;
+}
+.estadistica p {
+  color: black;
+  font-size: 2rem;
+}
+.estadistica span {
+  font-size: 2.5rem;
+  color: rgb(0, 255, 81);
+  font-weight: 900;
+  text-align: center;
+}
+
+/* MENSAJES DEL SISTEMA */
+/* MENSAJE SISTEMA: 
+REGISTRO MASCOTA CORRECTO*/
+.mensajeSistemaCorrecto {
+  border: 2px solid green;
+  border-radius: 15px;
+  background-color: green;
+  padding: 5px 8px;
+}
+.mensajeSistemaCorrecto p {
+  color: white;
+  font-weight: 900;
+  font-size: 1rem;
+}
+/* MENSAJES DEL SISTEMA: 
+REGISTRO MASCOTA INCORRECTO Y SIN 
+RESULTADOS PARA BUSQUEDAS */
+.mensajeSistemaInCorrecto,
+.cajasVacias {
+  border: 2px solid brown;
+  border-radius: 15px;
+  background-color: brown;
+  padding: 5px 8px;
+}
+.mensajeSistemaInCorrecto p,
+.cajasVacias p {
+  color: white;
+  font-weight: 900;
+  font-size: 1rem;
+}
+/* MENSAJE DEL SISTEMA: 
+SIN REGISTROS PARA BUSQUEDA POR 
+AÑO MES, COLOR O RAZA */
+.añoMesSinRegistros,
+.razaSinRegistros,
+.colorSinRegistros {
+  background-color: #daa520;
+  padding: 5px 8px;
+  border-radius: 15px;
+  border: 2px solid #daa520;
+}
+.añoMesSinRegistros p,
+.razaSinRegistros p,
+.colorSinRegistros p {
+  color: white;
+  font-weight: 900;
+  font-size: 1rem;
+}
+/* TABLA MASCOTAS */
+.contenido-TablaMascota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: brown;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+/* BOTONES LISTA */
+.botones-lista {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1rem;
+}
+.botones-lista button {
+  border: 2px solid gold;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  padding: 8px 15px;
+  color: gold;
+  font-weight: 900;
+  background-color: white;
+}
+.botones-lista button:hover {
+  background-color: gold;
+  color: white;
+}
+.botones-lista span {
+  border: 2px solid black;
+  padding: 5px 15px;
+  border: 2px solid brown;
+  border-radius: 15%;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+/* REGISTROS O FILAS */
+.filaMascota {
+  font-size: 1.3rem;
+}
+.filaMascota td:nth-last-child(2) {
+  color: black;
+  font-weight: 900;
+}
+/* BOTON VER POR CADA REGISTRO */
+.celdaBoton {
+  border: none;
+  text-align: center;
+}
+.botonVer {
+  font-size: 1.5rem;
+  padding: 5px 30px;
+  font-weight: 900;
+  color: white;
+  background-color: gold;
+  border: 2px solid gold;
+  border-radius: 15px;
+}
+.botonVer:hover {
+  color: gold;
+  background-color: white;
+  border: 2px solid gold;
+}
+
+/* CARD */
+#card {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.opciones {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 40px;
+}
+#cerrar {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 900;
+  color: brown;
+  background-color: white;
+  border: 5px solid brown;
+  border-radius: 20px;
+  font-weight: 900;
+  padding: 5px 10px;
+}
+#cerrar:hover {
+  background-color: brown;
+  color: white;
+}
+#guardar {
+  cursor: pointer;
+  border: 5px solid blue;
+  border-radius: 20px;
+  background-color: white;
+  padding: 5px 10px;
+  color: blue;
+  font-weight: 900;
+  font-size: 2rem;
+}
+#guardar:hover {
+  color: white;
+  background-color: blue;
+}
+.mascotaContenido {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  row-gap: 0.5rem;
+  padding: 1.5rem 5rem;
+  border: 5px solid gold;
+  border-radius: 25px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 2);
+}
+.mascotaContenido li {
+  color: gold;
+  font-weight: 900;
+}
+.mascotaContenido input {
+  font-size: 2rem;
+  width: 100%;
+  padding: 5px 15px;
+}
+/* DESABILITAR INPUT DUEÑOS */
+#etapaDeVida {
+  pointer-events: none; /* Evita clics y selecciones */
+  background-color: black; /* Fondo gris para simular deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+  color: yellow;
+  font-weight: 900;
+  border: none;
+  border-radius: 25px;
+}
