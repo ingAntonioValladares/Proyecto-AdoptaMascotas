@@ -156,6 +156,13 @@ p {
     width: 100%;
   }
 }
+/* AYUDA PARA BUSCAR */
+.ayuda {
+  color: black;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+}
 /* MENU */
 #menu {
   display: none;
